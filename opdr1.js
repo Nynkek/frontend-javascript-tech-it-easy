@@ -9,7 +9,7 @@ const tvTypes = inventory.map((tv) => {
 });
 
 console.log("1a " + tvTypes);
-
+console.log(inventory);
 const soldOutTVs = inventory.filter((tv) => {
     return (tv.originalStock - tv.sold) == 0;
 });
@@ -20,7 +20,7 @@ const tvWithAmbilight = inventory.filter((tv) => {
 });
 console.log("1c " + tvWithAmbilight);
 
-const sortTvPriceHighToLow = inventory.sort((a, b) => {
+inventory.sort((a, b) => {
     if (a.price > b.price) {
         return 1;
     }
@@ -30,4 +30,4 @@ const sortTvPriceHighToLow = inventory.sort((a, b) => {
     return 0;
 });
 
-console.log("1d " + sortTvPriceHighToLow);
+console.log(inventory);

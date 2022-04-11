@@ -1,9 +1,12 @@
+html {
+    background-color: lightgoldenrodyellow;
+}
 #tv-ingekocht {
-    color: blue;
+    color: cornflowerblue;
 }
 #tv-verkocht {
-    color: green;
+    color: darkolivegreen;
 }
 #tv-nog-te-verkopen {
-    color: red;
+    color: tomato;
 }

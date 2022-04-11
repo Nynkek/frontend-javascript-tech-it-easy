@@ -23,9 +23,9 @@ console.log("2d " + tvsToSell)
 
 // koppelen aan html
 
-tvOriginalStockHTML = document.getElementById('tv-ingekocht');
-tvsToSellHTML = document.getElementById('tv-nog-te-verkopen');
-tvsSoldHTML = document.getElementById('tv-verkocht');
+let tvOriginalStockHTML = document.getElementById('tv-ingekocht');
+let tvsToSellHTML = document.getElementById('tv-nog-te-verkopen');
+let tvsSoldHTML = document.getElementById('tv-verkocht');
+tvsSoldHTML.innerHTML = tvsSold;
 tvOriginalStockHTML.innerHTML = tvOriginalStock;
 tvsToSellHTML.innerHTML = tvsToSell.toString();
-tvsSoldHTML.innerHTML = tvsSold;
