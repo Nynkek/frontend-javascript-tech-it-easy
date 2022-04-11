@@ -1,6 +1,16 @@
 html {
-    background-color: lightgoldenrodyellow;
+    background-color: antiquewhite;
+    color: #10403B;
 }
+
+h1, h2 {
+    color: #127369;
+}
+
+h3 {
+    color: #4C5958;
+}
+
 #tv-ingekocht {
     color: cornflowerblue;
 }
