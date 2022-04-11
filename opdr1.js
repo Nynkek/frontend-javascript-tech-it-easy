@@ -20,14 +20,17 @@ const tvWithAmbilight = inventory.filter((tv) => {
 });
 console.log("1c " + tvWithAmbilight);
 
-inventory.sort((a, b) => {
-    if (a.price > b.price) {
-        return 1;
-    }
-    if (b.price > a.price) {
-        return -1;
-    }
-    return 0;
-});
+function sortHighToLow(array) {
+    array.sort((a, b) => {
+        if (a.price > b.price) {
+            return 1;
+        }
+        if (b.price > a.price) {
+            return -1;
+        }
+        return 0;
+    });
+    return array;
+}
 
-console.log(inventory);
+sortHighToLow(inventory);

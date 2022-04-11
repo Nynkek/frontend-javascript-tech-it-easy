@@ -35,8 +35,8 @@ function tvResolution(item) {
         return resolution;
     } else {
         for (let i = 0; i < item.length; i++) {
-            let resolution = item[i] + " inch (" + inchToCm(item[i]) + " cm)";
-            resolutionArray.push(resolution);
+            let resolutionInchAndCm = item[i] + " inch (" + inchToCm(item[i]) + " cm)";
+            resolutionArray.push(resolutionInchAndCm);
         }
         resolution = resolutionArray.join(" | ");
         return resolution;
@@ -56,13 +56,12 @@ console.log("hier begin 4d");
 let tvResolutionHTML = document.getElementById('tv-weergeven');
 
 function printTv(item) {
-    tvResolutionHTML.innerHTML += `<h3>${tvName(item)}</h3> <p> ${tvPrice(item)} <br> ${tvResolution(item.availableSizes)} </p>`
+    tvResolutionHTML.innerHTML += `
+            <h3>${tvName(item)}</h3> 
+            <p> ${tvPrice(item)} <br> ${tvResolution(item.availableSizes)} </p>
+            `;
     return tvResolutionHTML;
 }
-
-printTv(inventory[4]);
-printTv(inventory[1]);
-
 
 // opdracht 4e: tv-generator functie
 
@@ -71,5 +70,4 @@ function showTvs(array) {
         printTv(array[i]);
     }
 }
-
 showTvs(inventory);

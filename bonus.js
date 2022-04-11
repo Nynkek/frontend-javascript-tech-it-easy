@@ -4,15 +4,29 @@
 // Zorg ervoor dat de functies de uitkomsten in de console loggen als de gebruiker op de bijbehorende knop klikt.
 // Tip: lees hiervoor paragraaf 7.4 op EdHub eens door!
 
+const price = document.getElementById('sorteer-prijs-btn');
+const ambilight = document.getElementById('ambilight-tvs-btn');
+const soldOut = document.getElementById('uitverkocht-btn');
+const test = document.getElementById('test');
 
 
+priceSort = sortHighToLow(inventory);
+ambientSort = tvWithAmbilight;
+soldOutSort = tvsSold;
 
+function showButtonInput(item) {
 
+    test.innerHTML = `nog een test`;
+    console.log("click");
+    return showTvs(item);
+}
 
-
-
-
-
-// Zorg er nu voor, in plaats van dat de uitkomsten in de console worden gelogd,
-// dat de uitkomsten worden meegegeven aan jouw generateTV-functie
-// zodat de resultaten daadwerkelijk op de pagina weergegeven worden!
+price.addEventListener('click', function () {
+    showButtonInput(priceSort)
+});
+ambilight.addEventListener('click', function () {
+    showButtonInput(ambientSort)
+});
+soldOut.addEventListener('click', function () {
+    showButtonInput(soldOutSort)
+});
