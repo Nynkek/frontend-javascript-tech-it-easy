@@ -27,20 +27,11 @@ function inchToCm(inch) {
 
 
 function tvResolution(item) {
-    let resolution = "";
-    let resolutionArray = [];
-
-    if (item.length === 1) {
-        resolution = item + " inch (" + inchToCm(item) + " cm)";
-        return resolution;
-    } else {
-        for (let i = 0; i < item.length; i++) {
-            let resolutionInchAndCm = item[i] + " inch (" + inchToCm(item[i]) + " cm)";
-            resolutionArray.push(resolutionInchAndCm);
-        }
-        resolution = resolutionArray.join(" | ");
-        return resolution;
-    }
+    let resolutionArray = item.map((res) => {
+        return res + " inch (" + inchToCm(res) + " cm)";
+    });
+    let resolution = resolutionArray.join(" | ");
+    return resolution;
 }
 
 let printDitVoorMe = tvResolution(inventory[0].availableSizes);
@@ -66,8 +57,11 @@ function printTv(item) {
 // opdracht 4e: tv-generator functie
 
 function showTvs(array) {
+    tvResolutionHTML.innerHTML = "";
     for (let i = 0; i < array.length; i++) {
         printTv(array[i]);
     }
 }
+
 showTvs(inventory);
+

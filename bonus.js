@@ -10,13 +10,13 @@ const soldOut = document.getElementById('uitverkocht-btn');
 const test = document.getElementById('test');
 
 
-priceSort = sortHighToLow(inventory);
-ambientSort = tvWithAmbilight;
-soldOutSort = tvsSold;
+let priceSort = sortHighToLow(inventory);
+let ambientSort = tvWithAmbilight;
+let soldOutSort = tvsSold;
 
 function showButtonInput(item) {
 
-    test.innerHTML = `nog een test`;
+    // test.innerHTML = `nog een test`;
     console.log("click");
     return showTvs(item);
 }
@@ -30,3 +30,4 @@ ambilight.addEventListener('click', function () {
 soldOut.addEventListener('click', function () {
     showButtonInput(soldOutSort)
 });
+
